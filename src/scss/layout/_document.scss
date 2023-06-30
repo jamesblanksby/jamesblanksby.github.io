@@ -1,0 +1,39 @@
+/* ////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////// DOCUMENT /// */
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* -------------------------------------------------------------------- COLOR --- */
+:root {
+    --color-background: white;
+    --color-foreground: black;
+    @media (prefers-color-scheme: dark) {
+        --color-background: black;
+        --color-foreground: white;
+    }
+}
+
+/* ----------------------------------------------------------------- DOCUMENT --- */
+html,
+body {
+    background-color: var(--color-background);
+    user-select: none;
+}
+
+/* --------------------------------------------------------------------- HTML --- */
+html {
+    height: 100%;
+}
+
+/* --------------------------------------------------------------------- BODY --- */
+body {
+    display: flex;
+    min-height: 100%;
+    padding: 32px;
+    flex-direction: column;
+    @media (max-width: nth($break, 2)) {
+        padding: 24px;
+    }
+    @media (max-width: nth($break, 4)) {
+        padding: 16px;
+    }
+}

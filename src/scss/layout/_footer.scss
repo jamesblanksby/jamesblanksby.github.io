@@ -1,0 +1,48 @@
+/* ////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// FOOTER /// */
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* ------------------------------------------------------------------- FOOTER --- */
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    color: var(--color-foreground);
+    font-size: 1rem;
+    text-transform: uppercase;
+    @media (max-width: nth($break, 2)) {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: repeat(2, auto);
+        gap: 0.625rem 0;
+    }
+}
+footer time {
+    display: flex;
+    justify-self: start;
+    flex-direction: row;
+    gap: 0 0.375rem;
+}
+footer time::before {
+    content: '\a9';
+}
+footer code {
+    white-space: nowrap;
+    @media (min-width: (nth($break, 2) + 1px)) {
+        justify-self: center;
+    }
+    @media (max-width: nth($break, 2)) {
+        grid-row: 2;
+    }
+}
+footer a {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    margin-top: -0.0625rem;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    justify-self: end;
+    background-color: var(--color-foreground);
+    @media (max-width: nth($break, 2)) {
+        grid-row: 2;
+    }
+}

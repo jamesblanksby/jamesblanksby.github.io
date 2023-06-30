@@ -1,0 +1,36 @@
+/* ////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// HEADER /// */
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* ------------------------------------------------------------------- HEADER --- */
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    color: var(--color-foreground);
+    font-size: 1rem;
+    text-transform: uppercase;
+    @media (max-width: nth($break, 2)) {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: repeat(2, auto);
+        gap: 0.625rem 0;
+    }
+}
+header address {
+    justify-self: start;
+    @media (max-width: nth($break, 2)) {
+        grid-row: 2;
+    }
+}
+header h1 {
+    @media (min-width: (nth($break, 2) + 1px)) {
+        justify-self: center;
+    }
+    @media (max-width: nth($break, 2)) {
+        grid-row: 1;
+    }
+}
+header a {
+    display: block;
+    justify-self: end;
+}
