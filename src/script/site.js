@@ -21,20 +21,20 @@ function init() {
 /* --------------------------------------------------------------------- INIT --- */
 function footer_init() {
     // prepare
-    header_prepare();
+    footer_prepare();
 }
 
 /* ------------------------------------------------------------------ PREPARE --- */
-function header_prepare() {
+function footer_prepare() {
     // time
-    header_time();
+    footer_time();
 
     // code
-    header_code();
+    footer_code();
 }
 
 /* --------------------------------------------------------------------- TIME --- */
-function header_time() {
+function footer_time() {
     var $time;
     var datetime,
         date,
@@ -54,7 +54,7 @@ function header_time() {
 }
 
 /* --------------------------------------------------------------------- CODE --- */
-function header_code() {
+function footer_code() {
     var $code;
     var uuid;
 
