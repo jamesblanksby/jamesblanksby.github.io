@@ -5,14 +5,14 @@
 /* ------------------------------------------------------------------- HEADER --- */
 header {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
     color: var(--color-foreground);
     font-size: 1rem;
     text-transform: uppercase;
     @media (max-width: nth($break, 2)) {
-        grid-template-columns: 1fr auto;
         grid-template-rows: repeat(2, auto);
+        grid-template-columns: 1fr auto;
         gap: 0.625rem 0;
     }
 }
