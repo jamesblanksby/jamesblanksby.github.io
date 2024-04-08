@@ -4,7 +4,57 @@
 
 /* --------------------------------------------------------------------- MAIN --- */
 main {
+    display: flex;
     min-height: 128px;
+    padding: 32px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
     flex-grow: 1;
     flex-shrink: 0;
+    counter-reset: index;
+    @media (max-width: nth($break, 2)) {
+        padding: 24px;
+    }
+    @media (max-width: nth($break, 4)) {
+        padding: 16px;
+    }
+}
+
+/* ------------------------------------------------------------------ ARTICLE --- */
+article {
+    color: var(--color-foreground);
+    counter-increment: index;
+    font-size: 1rem;
+    line-height: 1.375;
+    pointer-events: none;
+    @media (hover: hover) {
+        transition: translate 125ms;
+    }
+}
+article:not(:first-of-type) {
+    margin-top: 1.5rem;
+}
+article:hover {
+    @media (hover: hover) {
+        translate: 1rem;
+    }
+}
+article::before {
+    display: block;
+    content: counters(index, '', decimal-leading-zero);
+    font-feature-settings: 'tnum';
+}
+article a {
+    display: contents;
+    pointer-events: auto;
+}
+article h2 {
+    text-transform: uppercase;
+}
+article p {
+    max-width: 24em;
+}
+article p::before {
+    content: '\2014';
 }
