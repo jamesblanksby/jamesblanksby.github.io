@@ -18,7 +18,7 @@ header {
 }
 header address {
     justify-self: start;
-    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
     @media (max-width: nth($break, 2)) {
         grid-row: 2;
     }
