@@ -21,11 +21,13 @@ footer time {
     justify-self: start;
     flex-direction: row;
     gap: 0 0.375rem;
+    font-feature-settings: 'tnum';
 }
 footer time::before {
     content: '\a9';
 }
 footer code {
+    font-feature-settings: 'tnum';
     white-space: nowrap;
     @media (min-width: (nth($break, 2) + 1px)) {
         justify-self: center;
